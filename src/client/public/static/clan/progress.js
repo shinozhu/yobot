@@ -205,9 +205,6 @@ var vm = new Vue({
                 case '5':
                     window.location = `../my/`;
                     break;
-                case '6':
-                    window.location = `../leftTimeCaculator/`;
-                    break;
             }
         },
         handleSelectionChange(val) {
