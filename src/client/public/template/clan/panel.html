@@ -205,13 +205,6 @@
             </div>
           </el-dialog>
           <el-col :span="6"><el-button type="success" size="small">尾刀时间计算</el-button></el-col>
-          <el-dialog title="尾刀时间计算" :visible.sync="recordFormVisible">
-            <el-form>
-              <el-form-item label="先出伤害" label-width="120">
-                <el-input v-model="damage" name="firstDamage" @onchange="calc"></el-input>
-              </el-form-item>
-            </el-form>
-          </el-dialog>
         </el-row>
         {% else -%}
         <p><a class="exbig">非公会战成员只允许查看</a></p>
