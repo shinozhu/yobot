@@ -207,19 +207,8 @@
           <el-col :span="6"><el-button type="success" size="small">尾刀时间计算</el-button></el-col>
           <el-dialog title="尾刀时间计算" :visible.sync="recordFormVisible">
             <el-form>
-              <el-form-item label="剩余血量" label-width="120">
-                <el-input v-model.number="bossData.health" name="targetHP" @onchange="calc">
-                  <template slot="prepend">[[ damageHint ]]</template>
-                </el-input>
-              </el-form-item>
               <el-form-item label="先出伤害" label-width="120">
                 <el-input v-model="damage" name="firstDamage" @onchange="calc"></el-input>
-              </el-form-item>
-              <el-form-item label="后出伤害" label-width="120">
-                <el-input v-model="damage" name="secondDamage" @onchange="calc"></el-input>
-              </el-form-item>
-              <el-form-item label="剩余时间" label-width="120">
-                <el-input v-model="message" name="returnTime" @onchange="calc"></el-input>
               </el-form-item>
             </el-form>
           </el-dialog>
