@@ -40,16 +40,13 @@
 </head>
 
 <body>
-  <div id="app">
     剩余血量：<input name="targetHP" type="text" onchange="calc()"/><p>
     先出伤害：<input name="firstDamage" type="text" onchange="calc()"/><p>
     后出伤害：<input name="secondDamage" type="text" onchange="calc()"/><p>
     返回时间：<input name="returnTime" type="text"/>
-  </div>
   <footer style="text-align: center">
     powered by <a href="https://github.com/pcrbot/yobot">yobot</a>
   </footer>
 </body>
-<script>var csrf_token = "{{ session['csrf_token'] }}";</script>
 
 </html>

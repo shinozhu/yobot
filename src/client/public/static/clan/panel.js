@@ -269,7 +269,7 @@ var vm = new Vue({
                     window.location = `./${this.self_id}/`;
                     break;
                 case '6':
-                    window.location = `./leftTimeCaculator/`;
+                    window.location =  './leftTimeCaculator/';
                     break;
             }
         },
