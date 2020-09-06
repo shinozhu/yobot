@@ -273,6 +273,12 @@ var vm = new Vue({
                     break;
             }
         },
+        calc(){
+		var targetHP = document.getElementsByName("targetHP")[0].value;
+		var firstDamage = document.getElementsByName("firstDamage")[0].value;
+		var secondDamage = document.getElementsByName("secondDamage")[0].value;
+		document.getElementsByName("returnTime")[0].value = 90-parseInt((targetHP-firstDamage)/secondDamage*90)+20;
+	    },
     },
     delimiters: ['[[', ']]'],
 })

@@ -29,14 +29,6 @@
     }
   </style>
 
-  <script type="text/javascript">
-	function calc(){
-		var targetHP = document.getElementsByName("targetHP")[0].value;
-		var firstDamage = document.getElementsByName("firstDamage")[0].value;
-		var secondDamage = document.getElementsByName("secondDamage")[0].value;
-		document.getElementsByName("returnTime")[0].value = 90-parseInt((targetHP-firstDamage)/secondDamage*90)+20;
-	}
-  </script>
 </head>
 
 <body>
@@ -48,5 +40,14 @@
     powered by <a href="https://github.com/pcrbot/yobot">yobot</a>
   </footer>
 </body>
+
+  <script type="text/javascript">
+	function calc(){
+		var targetHP = document.getElementsByName("targetHP")[0].value;
+		var firstDamage = document.getElementsByName("firstDamage")[0].value;
+		var secondDamage = document.getElementsByName("secondDamage")[0].value;
+		document.getElementsByName("returnTime")[0].value = 90-parseInt((targetHP-firstDamage)/secondDamage*90)+20;
+	}
+  </script>
 
 </html>
