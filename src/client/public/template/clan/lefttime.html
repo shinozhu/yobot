@@ -7,27 +7,6 @@
   <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/index.js"></script>
   <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.0/theme-chalk/index.css">
-  <style>
-    .el-table td,
-    .el-table th {
-      text-align: center;
-    }
-    .el-popover {
-      white-space: pre-wrap;
-    }
-    .digit6{
-      color:blue;
-    }
-    .digit7{
-      color:green;
-    }
-    .digit8{
-      color:orange;
-    }
-    .digit9{
-      color:red;
-    }
-  </style>
 
 </head>
 
@@ -36,6 +15,8 @@
     先出伤害：<input name="firstDamage" type="text" onchange="calc()"/><p>
     后出伤害：<input name="secondDamage" type="text" onchange="calc()"/><p>
     返回时间：<input name="returnTime" type="text"/>
+
+    <p><a href="#" onclick="javascript:history.go(-1);">返回</a></p>
   <footer style="text-align: center">
     powered by <a href="https://github.com/pcrbot/yobot">yobot</a>
   </footer>
