@@ -36,7 +36,7 @@
       <el-menu-item index="3">查刀</el-menu-item>
       <el-menu-item index="4">统计</el-menu-item>
       <el-menu-item index="5">我的</el-menu-item>
-      <el-menu-item index="6">尾刀计算器</el-menu-item>
+      <!--<el-menu-item index="6">尾刀计算器</el-menu-item> -->
     </el-menu>
     <el-container style="margin-top: 50px">
       <el-header class="big">Boss状态</el-header>
@@ -204,7 +204,6 @@
               <el-button type="primary" @click="modify">修改</el-button>
             </div>
           </el-dialog>
-          <el-col :span="6"><a href='./lefttime/'><el-button type="info" size="small" @click="leavePage=true">尾刀时间计算</el-button></a></el-col>
         </el-row>
         {% else -%}
         <p><a class="exbig">非公会战成员只允许查看</a></p>
@@ -212,11 +211,25 @@
       </el-main>
     </el-container>
   </div>
+  <div>
+    剩余血量：<input name="targetHP" type="text" onchange="calc()"/><p>
+    先出伤害：<input name="firstDamage" type="text" onchange="calc()"/><p>
+    后出伤害：<input name="secondDamage" type="text" onchange="calc()"/><p>
+    返回时间：<input name="returnTime" type="text"/>
+  </div>
   <footer style="text-align: center">
     powered by <a href="https://github.com/pcrbot/yobot">yobot</a>
   </footer>
 </body>
 <script>var csrf_token = "{{ session['csrf_token'] }}";</script>
 <script src="{{ url_for('yobot_static', filename='clan/panel.js') }}"></script>
+<script type="text/javascript">
+	function calc(){
+		var targetHP = document.getElementsByName("targetHP")[0].value;
+		var firstDamage = document.getElementsByName("firstDamage")[0].value;
+		var secondDamage = document.getElementsByName("secondDamage")[0].value;
+		document.getElementsByName("returnTime")[0].value = 90-parseInt((targetHP-firstDamage)/secondDamage*90)+20;
+	}
+</script>
 
 </html>

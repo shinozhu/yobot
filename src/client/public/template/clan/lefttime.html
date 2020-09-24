@@ -30,5 +30,27 @@
 		document.getElementsByName("returnTime")[0].value = 90-parseInt((targetHP-firstDamage)/secondDamage*90)+20;
 	}
   </script>
+  <script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            tableData: [],
+            bosses: []
+        },
+        mounted: function () {
+            _this = this
+            axios.get("../../lefttime/").then((function (stats) {
+                if (stats.data.code != 0) {
+                    _this.$alert(res.data.message, '获取数据失败');
+                    return
+                }
+
+                }
+            }))
+
+        },
+        delimiters: ['[[', ']]'],
+    })
+</script>
 
 </html>
